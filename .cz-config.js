@@ -43,6 +43,12 @@ module.exports = {
   scopes: [
     {
       name: 'avon'
+    },
+    {
+      name: 'material'
+    },
+    {
+      name: 'shared'
     }
   ],
 

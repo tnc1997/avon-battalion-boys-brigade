@@ -1,0 +1,48 @@
+<div class="content mat-typography">
+  <app-header title="Companies"></app-header>
+
+  <app-sidenav>
+    <mat-grid-list app-sidenav-content cols="12" gutterSize="16px" rowHeight="100px">
+      <mat-grid-tile [colspan]="12" [rowspan]="6">
+        <mat-card>
+
+          <mat-card-header>
+            <mat-card-title>
+              <h1>Companies</h1>
+            </mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content>
+
+            <div class="example-header">
+              <mat-form-field>
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+              </mat-form-field>
+            </div>
+
+            <mat-table [dataSource]="dataSource" matSort #table>
+              <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
+              </ng-container>
+
+              <ng-container matColumnDef="location">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Location</mat-header-cell>
+                <mat-cell *matCellDef="let element">{{ element.location }}</mat-cell>
+              </ng-container>
+
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+
+            <mat-paginator [pageSize]="5" [pageSizeOptions]="[ 3, 4, 5, 6, 7 ]" #paginator></mat-paginator>
+
+          </mat-card-content>
+
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </app-sidenav>
+
+  <app-footer></app-footer>
+</div>
