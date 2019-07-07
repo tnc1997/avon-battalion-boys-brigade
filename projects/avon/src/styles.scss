@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/_theming';
+@import './theme';
+
+$primary-accent: mat-color($app-primary, A200);
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+
+  &.mat-menu-item > .mat-icon {
+    margin-bottom: 14px;
+  }
+}
+
+a,
+.active *,
+.mat-focused .mat-form-field-label,
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow,
+.mat-header-cell.mat-sort-header-sorted,
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: $primary-accent !important;
+}
+
+button.mat-menu-item {
+  line-height: 24px !important;
+}
+
+body {
+  margin: 0;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.mat-icon svg {
+  height: 24px;
+  width: 24px;
+}
