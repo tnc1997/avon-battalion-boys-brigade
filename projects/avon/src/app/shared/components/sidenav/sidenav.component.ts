@@ -25,10 +25,18 @@ export class SidenavComponent implements OnDestroy, OnInit {
   }
 
   ngOnDestroy(): void {
-    this.mobileQuery.removeEventListener('resize', this.mobileQueryListener);
+    if (this.mobileQuery.removeEventListener) {
+      this.mobileQuery.removeEventListener('resize', this.mobileQueryListener);
+    } else if (this.mobileQuery.removeListener) {
+      this.mobileQuery.removeListener(this.mobileQueryListener);
+    }
   }
 
   ngOnInit(): void {
-    this.mobileQuery.addEventListener('resize', this.mobileQueryListener);
+    if (this.mobileQuery.addEventListener) {
+      this.mobileQuery.addEventListener('resize', this.mobileQueryListener);
+    } else if (this.mobileQuery.addListener) {
+      this.mobileQuery.addListener(this.mobileQueryListener);
+    }
   }
 }
