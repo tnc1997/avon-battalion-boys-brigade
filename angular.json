@@ -22,7 +22,7 @@
             "main": "projects/avon/src/main.ts",
             "polyfills": "projects/avon/src/polyfills.ts",
             "tsConfig": "projects/avon/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/avon/src/browserconfig.xml",
               "projects/avon/src/favicon.ico",
