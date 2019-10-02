@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: '12.x'
+      - name: Run pnpm install
+        run: |
+          curl -L https://unpkg.com/@pnpm/self-installer | node
+          pnpm install
+      - name: Run ng build
+        run: pnpm run build -- --prod
+      - uses: actions/upload-artifact@master
+        with:
+          name: dist
+          path: dist
