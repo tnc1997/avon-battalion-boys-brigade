@@ -3,6 +3,5 @@ export class SidenavItem {
     public title: string,
     public icon: string,
     public routerLink: string
-  ) {
-  }
+  ) {}
 }

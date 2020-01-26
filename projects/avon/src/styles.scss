@@ -114,7 +114,7 @@ $typography-config: mat-typography-config(
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color
-$primary: mat-palette($mat-grey, 900);
+$primary: mat-palette($boys-brigade-light-blue, 500);
 $accent: mat-palette($boys-brigade-light-blue);
 
 // The warn palette is optional (defaults to red).
@@ -139,12 +139,8 @@ a {
 }
 
 a,
-.active *,
-.mat-focused .mat-form-field-label,
-.mat-form-field.mat-focused.mat-primary .mat-select-arrow,
-.mat-header-cell.mat-sort-header-sorted,
-.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
-  color: mat-color($accent) !important;
+.active * {
+  color: mat-color($primary) !important;
 }
 
 body {
