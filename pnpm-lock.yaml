@@ -512,7 +512,7 @@ packages:
       convert-source-map: 1.7.0
       debug: 4.1.1(supports-color@6.1.0)
       json5: 2.1.1
-      lodash: 4.17.15
+      lodash: 4.17.21
       resolve: 1.15.0
       semver: 5.7.1
       source-map: 0.5.7
@@ -535,7 +535,7 @@ packages:
       debug: 4.1.1(supports-color@6.1.0)
       gensync: 1.0.0-beta.1
       json5: 2.1.1
-      lodash: 4.17.15
+      lodash: 4.17.21
       resolve: 1.15.0
       semver: 5.7.1
       source-map: 0.5.7
@@ -558,7 +558,7 @@ packages:
     dependencies:
       '@babel/types': 7.8.3
       jsesc: 2.5.2
-      lodash: 4.17.15
+      lodash: 4.17.21
       source-map: 0.5.7
     dev: true
 
@@ -567,7 +567,7 @@ packages:
     dependencies:
       '@babel/types': 7.8.3
       jsesc: 2.5.2
-      lodash: 4.17.15
+      lodash: 4.17.21
       source-map: 0.5.7
     dev: true
 
@@ -611,7 +611,7 @@ packages:
     dependencies:
       '@babel/helper-function-name': 7.8.3
       '@babel/types': 7.8.3
-      lodash: 4.17.15
+      lodash: 4.17.21
     dev: true
 
   /@babel/helper-environment-visitor@7.22.20:
@@ -683,7 +683,7 @@ packages:
       '@babel/helper-split-export-declaration': 7.8.3
       '@babel/template': 7.8.3
       '@babel/types': 7.8.3
-      lodash: 4.17.15
+      lodash: 4.17.21
     dev: true
 
   /@babel/helper-optimise-call-expression@7.8.3:
@@ -699,7 +699,7 @@ packages:
   /@babel/helper-regex@7.8.3:
     resolution: {integrity: sha512-BWt0QtYv/cg/NecOAZMdcn/waj/5P26DR4mVLXfFtDokSR6fyuG0Pj+e2FqtSME+MqED1khnSMulkmGl8qWiUQ==}
     dependencies:
-      lodash: 4.17.15
+      lodash: 4.17.21
     dev: true
 
   /@babel/helper-remap-async-to-generator@7.8.3:
@@ -965,7 +965,7 @@ packages:
     dependencies:
       '@babel/core': 7.7.7
       '@babel/helper-plugin-utils': 7.8.3
-      lodash: 4.17.15
+      lodash: 4.17.21
     dev: true
 
   /@babel/plugin-transform-classes@7.8.3(@babel/core@7.7.7):
@@ -1353,7 +1353,7 @@ packages:
     resolution: {integrity: sha512-jBD+G8+LWpMBBWvVcdr4QysjUE4mU/syrhN17o1u3gx0/WzJB1kwiVZAXRtWbsIPOwW8pF/YJV5+nmetPzepXg==}
     dependencies:
       esutils: 2.0.3
-      lodash: 4.17.15
+      lodash: 4.17.21
       to-fast-properties: 2.0.0
     dev: true
 
@@ -1570,7 +1570,7 @@ packages:
       eslint-visitor-keys: 1.1.0
       glob: 7.1.6
       is-glob: 4.0.1
-      lodash: 4.17.15
+      lodash: 4.17.21
       semver: 6.3.0
       tsutils: 3.17.1(typescript@3.7.5)
       typescript: 3.7.5
@@ -2036,7 +2036,7 @@ packages:
   /async@2.6.3:
     resolution: {integrity: sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==}
     dependencies:
-      lodash: 4.17.15
+      lodash: 4.17.21
     dev: true
 
   /asynckit@0.4.0:
@@ -3677,7 +3677,7 @@ packages:
       js-yaml: 3.13.1
       json-stable-stringify-without-jsonify: 1.0.1
       levn: 0.3.0
-      lodash: 4.17.15
+      lodash: 4.17.21
       minimatch: 3.0.4
       mkdirp: 0.5.1
       natural-compare: 1.4.0
@@ -4525,7 +4525,7 @@ packages:
     dependencies:
       http-proxy: 1.18.0(supports-color@6.1.0)
       is-glob: 4.0.1
-      lodash: 4.17.15
+      lodash: 4.17.21
       micromatch: 3.1.10(supports-color@6.1.0)
     transitivePeerDependencies:
       - supports-color
@@ -4708,7 +4708,7 @@ packages:
       cli-width: 2.2.0
       external-editor: 3.1.0
       figures: 3.1.0
-      lodash: 4.17.15
+      lodash: 4.17.21
       mute-stream: 0.0.8
       run-async: 2.3.0
       rxjs: 6.5.4
@@ -4727,7 +4727,7 @@ packages:
       cli-width: 2.2.0
       external-editor: 3.1.0
       figures: 3.1.0
-      lodash: 4.17.15
+      lodash: 4.17.21
       mute-stream: 0.0.8
       run-async: 2.3.0
       rxjs: 6.5.4
@@ -5394,7 +5394,7 @@ packages:
       graceful-fs: 4.2.3
       http-proxy: 1.18.0(supports-color@6.1.0)
       isbinaryfile: 3.0.3
-      lodash: 4.17.15
+      lodash: 4.17.21
       log4js: 4.5.1
       mime: 2.4.4
       minimatch: 3.0.4
@@ -5547,8 +5547,8 @@ packages:
     resolution: {integrity: sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=}
     dev: true
 
-  /lodash@4.17.15:
-    resolution: {integrity: sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==}
+  /lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: true
 
   /log-symbols@3.0.0:
@@ -8162,7 +8162,7 @@ packages:
       date-format: 2.1.0
       debug: 3.2.6(supports-color@6.1.0)
       fs-extra: 7.0.1
-      lodash: 4.17.15
+      lodash: 4.17.21
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8372,7 +8372,7 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       ajv: 6.11.0
-      lodash: 4.17.15
+      lodash: 4.17.21
       slice-ansi: 2.1.0
       string-width: 3.1.0
     dev: true
@@ -8982,7 +8982,7 @@ packages:
   /webpack-merge@4.2.2:
     resolution: {integrity: sha512-TUE1UGoTX2Cd42j3krGYqObZbOD+xF7u28WB7tfUordytSjbWTIjK/8V0amkBfTYN4/pB/GIDlJZZ657BGG19g==}
     dependencies:
-      lodash: 4.17.15
+      lodash: 4.17.21
     dev: true
 
   /webpack-sources@1.4.3:
