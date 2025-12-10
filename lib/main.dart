@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'home/home_route.dart';
+import 'common/shell_route.dart';
 
 void main() {
   runApp(
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: GoRouter(
         routes: [
-          $homeRoute,
+          $shellRoute,
         ],
       ),
       title: 'Avon Battalion Boys\' Brigade',
