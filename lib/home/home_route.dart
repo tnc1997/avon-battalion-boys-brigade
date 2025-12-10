@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../common/shell_route.dart';
 import 'home_screen.dart';
 
-part 'home_route.g.dart';
-
-@TypedGoRoute<HomeRoute>(
-  path: '/',
-)
 class HomeRoute extends GoRouteData with $HomeRoute {
   const HomeRoute();
 
