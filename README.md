@@ -1,4 +1,4 @@
-# avon_battalion_boys_brigade
+# Avon Battalion Boys' Brigade
 
 A new Flutter project.
 
