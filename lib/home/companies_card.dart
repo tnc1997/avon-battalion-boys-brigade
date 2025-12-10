@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../companies/companies_route.dart';
+
 class CompaniesCard extends StatefulWidget {
   const CompaniesCard({
     super.key,
@@ -68,6 +70,8 @@ class _CompaniesCardState extends State<CompaniesCard> {
   void initState() {
     super.initState();
 
-    _recognizer.onTap = () {};
+    _recognizer.onTap = () {
+      CompaniesRoute().go(context);
+    };
   }
 }
