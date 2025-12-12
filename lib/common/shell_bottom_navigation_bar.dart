@@ -63,6 +63,7 @@ class ShellBottomNavigationBar extends StatelessWidget {
         '/events' => 3,
         _ => 0,
       },
+      useLegacyColorScheme: false,
     );
   }
 }
