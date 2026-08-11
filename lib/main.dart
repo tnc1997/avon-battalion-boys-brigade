@@ -128,13 +128,13 @@ class MyApp extends StatelessWidget {
             fontFamily: 'Proxima Nova',
           ),
           labelLarge: TextStyle(
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'IBM Plex Mono',
           ),
           labelMedium: TextStyle(
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'IBM Plex Mono',
           ),
           labelSmall: TextStyle(
-            fontFamily: 'Proxima Nova',
+            fontFamily: 'IBM Plex Mono',
           ),
         ),
       ),
