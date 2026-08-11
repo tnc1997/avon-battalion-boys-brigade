@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme(
+        colorScheme: const ColorScheme(
           brightness: Brightness.light,
           primary: Color(0xFF224B8E),
           onPrimary: Colors.white,
@@ -27,9 +27,56 @@ class MyApp extends StatelessWidget {
           onSurface: Colors.black,
           onSurfaceVariant: Colors.black,
         ),
+        textTheme: const TextTheme(
+          displayLarge: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          displayMedium: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          displaySmall: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          headlineLarge: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          headlineMedium: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          headlineSmall: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          titleLarge: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          titleMedium: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          titleSmall: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          bodyLarge: TextStyle(
+            fontFamily: 'Proxima Nova',
+          ),
+          bodyMedium: TextStyle(
+            fontFamily: 'Proxima Nova',
+          ),
+          bodySmall: TextStyle(
+            fontFamily: 'Proxima Nova',
+          ),
+          labelLarge: TextStyle(
+            fontFamily: 'IBM Plex Mono',
+          ),
+          labelMedium: TextStyle(
+            fontFamily: 'IBM Plex Mono',
+          ),
+          labelSmall: TextStyle(
+            fontFamily: 'IBM Plex Mono',
+          ),
+        ),
       ),
       darkTheme: ThemeData(
-        colorScheme: ColorScheme(
+        colorScheme: const ColorScheme(
           brightness: Brightness.dark,
           primary: Color(0xFF5D99D2),
           onPrimary: Colors.black,
@@ -42,6 +89,53 @@ class MyApp extends StatelessWidget {
           surface: Colors.black,
           onSurface: Colors.white,
           onSurfaceVariant: Colors.white,
+        ),
+        textTheme: const TextTheme(
+          displayLarge: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          displayMedium: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          displaySmall: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          headlineLarge: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          headlineMedium: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          headlineSmall: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          titleLarge: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          titleMedium: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          titleSmall: TextStyle(
+            fontFamily: 'Futura',
+          ),
+          bodyLarge: TextStyle(
+            fontFamily: 'Proxima Nova',
+          ),
+          bodyMedium: TextStyle(
+            fontFamily: 'Proxima Nova',
+          ),
+          bodySmall: TextStyle(
+            fontFamily: 'Proxima Nova',
+          ),
+          labelLarge: TextStyle(
+            fontFamily: 'IBM Plex Mono',
+          ),
+          labelMedium: TextStyle(
+            fontFamily: 'IBM Plex Mono',
+          ),
+          labelSmall: TextStyle(
+            fontFamily: 'IBM Plex Mono',
+          ),
         ),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
