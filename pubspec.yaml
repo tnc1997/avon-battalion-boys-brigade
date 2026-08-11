@@ -78,3 +78,22 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+  fonts:
+    - family: Futura
+      fonts:
+        - asset: fonts/Futura-Book.ttf
+          weight: 400
+        - asset: fonts/Futura-Bold.ttf
+          weight: 700
+    - family: IBM Plex Mono
+      fonts:
+        - asset: fonts/IBMPlexMono-Regular.ttf
+          weight: 400
+        - asset: fonts/IBMPlexMono-Bold.ttf
+          weight: 700
+    - family: Proxima Nova
+      fonts:
+        - asset: fonts/ProximaNova-Regular.ttf
+          weight: 400
+        - asset: fonts/ProximaNova-Bold.ttf
+          weight: 700
