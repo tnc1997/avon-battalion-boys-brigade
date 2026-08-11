@@ -13,22 +13,36 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme(
+          brightness: Brightness.light,
+          primary: Color(0xFF224B8E),
+          onPrimary: Colors.white,
+          secondary: Color(0xFF5D99D2),
+          onSecondary: Colors.black,
+          tertiary: Color(0xFF2D395A),
+          onTertiary: Colors.white,
+          error: Color(0xFFB3261E),
+          onError: Colors.white,
+          surface: Colors.white,
+          onSurface: Colors.black,
+          onSurfaceVariant: Colors.black,
+        ),
+      ),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme(
+          brightness: Brightness.dark,
+          primary: Color(0xFF5D99D2),
+          onPrimary: Colors.black,
+          secondary: Color(0xFF2D395A),
+          onSecondary: Colors.white,
+          tertiary: Color(0xFF224B8E),
+          onTertiary: Colors.white,
+          error: Color(0xFFF2B8B5),
+          onError: Colors.black,
+          surface: Colors.black,
+          onSurface: Colors.white,
+          onSurfaceVariant: Colors.white,
+        ),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -77,10 +91,6 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
