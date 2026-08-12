@@ -2,6 +2,7 @@ import 'package:flutter/material.dart' hide Hero;
 
 import 'header.dart';
 import 'hero.dart';
+import 'statistics.dart';
 
 void main() {
   runApp(const MyApp());
@@ -161,6 +162,7 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           children: [
             Hero(),
+            Statistics(),
           ],
         ),
       ),
