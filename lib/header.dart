@@ -72,16 +72,25 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
         ],
       ),
       actions: [
-        for (final label in _labels)
-          TextButton(
-            onPressed: null,
-            child: Text(
-              label.toUpperCase(),
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Theme.of(context).colorScheme.onTertiary,
-                  ),
+        Row(
+          spacing: 16.0,
+          children: [
+            for (final label in _labels)
+              TextButton(
+                onPressed: null,
+                child: Text(
+                  label.toUpperCase(),
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        color: Theme.of(context).colorScheme.onTertiary,
+                      ),
+                ),
+              ),
+            FilledButton(
+              onPressed: null,
+              child: const Text('FIND A COMPANY'),
             ),
-          ),
+          ],
+        ),
       ],
       backgroundColor: Theme.of(context).colorScheme.tertiary,
       toolbarHeight: _height,
