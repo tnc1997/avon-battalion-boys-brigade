@@ -56,6 +56,19 @@ class Hero extends StatelessWidget {
                           color: Theme.of(context).colorScheme.onTertiary,
                         ),
                   ),
+                  Row(
+                    spacing: 16.0,
+                    children: [
+                      FilledButton(
+                        onPressed: null,
+                        child: const Text('FIND YOUR NEAREST COMPANY'),
+                      ),
+                      OutlinedButton(
+                        onPressed: null,
+                        child: const Text('BECOME A LEADER'),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
