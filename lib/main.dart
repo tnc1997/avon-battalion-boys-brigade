@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart' hide Hero;
 
+import 'age_groups.dart';
 import 'header.dart';
 import 'hero.dart';
 import 'statistics.dart';
@@ -163,6 +164,7 @@ class MyHomePage extends StatelessWidget {
           children: [
             Hero(),
             Statistics(),
+            AgeGroups(),
           ],
         ),
       ),
