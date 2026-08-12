@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' hide Hero;
 
 import 'age_groups.dart';
+import 'find_a_company.dart';
 import 'header.dart';
 import 'hero.dart';
 import 'statistics.dart';
@@ -161,10 +162,12 @@ class MyHomePage extends StatelessWidget {
       appBar: const Header(),
       body: const SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Hero(),
             Statistics(),
             AgeGroups(),
+            FindACompany(),
           ],
         ),
       ),
