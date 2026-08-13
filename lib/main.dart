@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart' hide Hero;
 
 import 'age_groups.dart';
+import 'events.dart';
 import 'find_a_company.dart';
 import 'header.dart';
 import 'hero.dart';
@@ -168,6 +169,7 @@ class MyHomePage extends StatelessWidget {
             Statistics(),
             AgeGroups(),
             FindACompany(),
+            Events(),
           ],
         ),
       ),
