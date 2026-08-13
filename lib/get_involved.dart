@@ -15,22 +15,33 @@ class GetInvolved extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.all(64.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: 16.0,
+        child: Row(
+          spacing: 64.0,
           children: [
-            Text(
-              'LEADERS MAKE IT HAPPEN.',
-              style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                    color: Theme.of(context).colorScheme.onPrimary,
-                    fontWeight: FontWeight.bold,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                spacing: 16.0,
+                children: [
+                  Text(
+                    'LEADERS MAKE IT HAPPEN.',
+                    style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                          color: Theme.of(context).colorScheme.onPrimary,
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
+                  Text(
+                    'Every company runs on volunteers — no experience needed, full training and DBS support provided. A couple of hours a week can shape a young person\'s whole week.',
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: Theme.of(context).colorScheme.onPrimary,
+                        ),
+                  ),
+                ],
+              ),
             ),
-            Text(
-              'Every company runs on volunteers — no experience needed, full training and DBS support provided. A couple of hours a week can shape a young person\'s whole week.',
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: Theme.of(context).colorScheme.onPrimary,
-                  ),
+            FilledButton(
+              onPressed: null,
+              child: const Text('ENQUIRE ABOUT VOLUNTEERING'),
             ),
           ],
         ),
