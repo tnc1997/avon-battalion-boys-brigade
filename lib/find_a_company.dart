@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'company_card.dart';
 
-class FindACompany extends StatelessWidget {
+class FindACompany extends StatefulWidget {
   static const _companies = [
     (
       name: '10th Bristol',
@@ -102,14 +102,54 @@ class FindACompany extends StatelessWidget {
     ),
   ];
 
+  static const _labels = {
+    'Mon': 'Monday',
+    'Tue': 'Tuesday',
+    'Wed': 'Wednesday',
+    'Thu': 'Thursday',
+    'Fri': 'Friday',
+    'Sat': 'Saturday',
+    'Sun': 'Sunday',
+  };
+
   const FindACompany({
     super.key,
   });
 
   @override
+  State<FindACompany> createState() {
+    return _FindACompanyState();
+  }
+}
+
+class _FindACompanyState extends State<FindACompany> {
+  String _selected = 'all';
+
+  @override
   Widget build(
     BuildContext context,
   ) {
+    final nights = FindACompany._companies
+        .expand((company) {
+          return company.nights;
+        })
+        .toSet()
+        .toList()
+      ..sort(
+        (a, b) {
+          return FindACompany._labels.keys
+              .toList()
+              .indexOf(a)
+              .compareTo(FindACompany._labels.keys.toList().indexOf(b));
+        },
+      );
+
+    final companies = _selected == 'all'
+        ? FindACompany._companies
+        : FindACompany._companies.where((company) {
+            return company.nights.contains(_selected);
+          }).toList();
+
     return DecoratedBox(
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.tertiary,
@@ -144,19 +184,100 @@ class FindACompany extends StatelessWidget {
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              spacing: 16.0,
+              spacing: 32.0,
               children: [
-                for (final company in _companies)
-                  CompanyCard(
-                    name: company.name,
-                    venue: company.venue,
-                    nights: company.nights,
-                    sections: company.sections,
-                    inclusivity: company.inclusivity,
-                  ),
+                Wrap(
+                  spacing: 8.0,
+                  runSpacing: 8.0,
+                  children: [
+                    _Filter(
+                      label: 'All nights',
+                      selected: _selected == 'all',
+                      onPressed: () {
+                        setState(() {
+                          _selected = 'all';
+                        });
+                      },
+                    ),
+                    for (final night in nights)
+                      _Filter(
+                        label: FindACompany._labels[night] ?? night,
+                        selected: _selected == night,
+                        onPressed: () {
+                          setState(() {
+                            _selected = night;
+                          });
+                        },
+                      ),
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  spacing: 16.0,
+                  children: [
+                    for (final company in companies)
+                      CompanyCard(
+                        name: company.name,
+                        venue: company.venue,
+                        nights: company.nights,
+                        sections: company.sections,
+                        inclusivity: company.inclusivity,
+                      ),
+                  ],
+                ),
               ],
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _Filter extends StatelessWidget {
+  const _Filter({
+    required this.label,
+    required this.selected,
+    required this.onPressed,
+  });
+
+  final String label;
+
+  final bool selected;
+
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(
+    BuildContext context,
+  ) {
+    return Material(
+      color: selected
+          ? Theme.of(context).colorScheme.secondary
+          : Colors.transparent,
+      borderRadius: BorderRadius.circular(32.0),
+      child: InkWell(
+        onTap: onPressed,
+        borderRadius: BorderRadius.circular(32.0),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Theme.of(context).colorScheme.secondary,
+            ),
+            borderRadius: BorderRadius.circular(32.0),
+          ),
+          padding: const EdgeInsets.symmetric(
+            vertical: 8.0,
+            horizontal: 16.0,
+          ),
+          child: Text(
+            label.toUpperCase(),
+            style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                  color: selected
+                      ? Theme.of(context).colorScheme.onSecondary
+                      : Theme.of(context).colorScheme.secondary,
+                ),
+          ),
         ),
       ),
     );
